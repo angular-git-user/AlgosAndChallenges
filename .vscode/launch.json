@@ -1,0 +1,126 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-A<Algo>",
+            "request": "launch",
+            "mainClass": "A",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayProblems<Algo>",
+            "request": "launch",
+            "mainClass": "ArrayProblems",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BinarySearchProblems<Algo>",
+            "request": "launch",
+            "mainClass": "BinarySearchProblems",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ClassLock3<Algo>",
+            "request": "launch",
+            "mainClass": "ClassLock3",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlattenTime<Algo>",
+            "request": "launch",
+            "mainClass": "FlattenTime",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ImmutableDemo1<Algo>",
+            "request": "launch",
+            "mainClass": "ImmutableDemo1",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Insertion<Algo>",
+            "request": "launch",
+            "mainClass": "Insertion",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MergeSort<Algo>",
+            "request": "launch",
+            "mainClass": "MergeSort",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MergeSortProblems<Algo>",
+            "request": "launch",
+            "mainClass": "MergeSortProblems",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Quick<Algo>",
+            "request": "launch",
+            "mainClass": "Quick",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ScaleFactor<Algo>",
+            "request": "launch",
+            "mainClass": "ScaleFactor",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Selection<Algo>",
+            "request": "launch",
+            "mainClass": "Selection",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algo>",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SortingAndSearching<Algo>",
+            "request": "launch",
+            "mainClass": "SortingAndSearching",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ThreadExample<Algo>",
+            "request": "launch",
+            "mainClass": "ThreadExample",
+            "projectName": "Algo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TreeProblem<Algo>",
+            "request": "launch",
+            "mainClass": "TreeProblem",
+            "projectName": "Algo"
+        }
+    ]
+}
