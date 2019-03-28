@@ -3,14 +3,98 @@ import java.util.*;
 
 import javax.lang.model.util.ElementScanner6;
 
+class ListComparator<String extends Comparable<String>> implements Comparator<List<String>> {
+
+    @Override
+    public int compare(List<String> o1, List<String> o2) {
+        // int c = o1.get(0).compareTo(o2.get(0));
+        if (o1.get(Hackerrank.sortColumn) == o2.get(Hackerrank.sortColumn)) {
+            return 0;
+        }
+        if (o1.get(Hackerrank.sortColumn) == null) {
+            return -1;
+        }
+        if (o2.get(Hackerrank.sortColumn) == null) {
+            return 1;
+        }
+        return (o1.get(Hackerrank.sortColumn).compareTo(o2.get(Hackerrank.sortColumn))) * Hackerrank.sortOrder;
+    }
+
+}
+
 public class Hackerrank {
-    static int[] a = new int[] { 2, 8, 8, 11, 13, 13, 16 };
+    static int[] a = new int[] { 9, 1, 4, 9, 0, 4, 8, 9, 0, 1 };
+
+    public static int sortColumn = 1;
+    public static int sortOrder = 1;
 
     public static void main(String args[]) {
 
-        Arrays.sort(a, 0, 5);
+        // Arrays.sort(a, 0, 5);
         // int count = makeAnagram("showman", "woman");
-        System.out.println(isValid("aaaaabc"));
+        // System.out.println(Arrays.toString(solution(a)));
+        List<List<String>> list = new ArrayList<>();
+
+        // p4 1 2
+        // p2 2 1
+        List<String> l1 = new ArrayList<>();
+        l1.add("p5");
+        l1.add("1");
+        l1.add("2");
+
+        List<String> l2 = new ArrayList<>();
+        l2.add("p1");
+        l2.add("3");
+        l2.add("1");
+
+        List<String> l3 = new ArrayList<>();
+        l3.add("p3");
+        l3.add("2");
+        l3.add("8");
+
+        list.add(l1);
+        list.add(l2);
+        list.add(l3);
+
+        Collections.sort(list, new ListComparator<>());
+        System.out.println("");
+
+        int totalItemsCount = 20;
+        int numberOfItemsPerPage = 5;
+        int page = 0;
+
+        int numberOfPages = (int) Math.floor((totalItemsCount + numberOfItemsPerPage - 1) / numberOfItemsPerPage);
+        int start = (page * numberOfItemsPerPage) - (numberOfItemsPerPage - 1);
+        int end = Math.min(start + numberOfItemsPerPage - 1, totalItemsCount);
+        System.out.println("");
+    }
+
+    public static int finalInstances(int instances, List<Integer> averageUtil) {
+
+        boolean actionTaken = false;
+        int upperLimit = 60;
+        int lowerLimit = 25;
+        System.out.println(instances);
+        for (int i = 0; i < averageUtil.size(); i++) {
+
+            int val = averageUtil.get(i);
+
+            if (val > upperLimit) {
+
+                instances = instances * 2;
+                System.out.println(instances);
+                // actionTaken = true;
+                i = i + 10;
+            } else if (val < lowerLimit && instances > 1) {
+
+                instances = (int) Math.ceil(instances / 2.0);
+                // actionTaken = true;
+                i = i + 10;
+                System.out.println(instances);
+            }
+        }
+        System.out.println(instances);
+        return instances;
     }
 
     public static int binSearch(int[] a, int search, int low, int high) {
