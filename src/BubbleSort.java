@@ -21,6 +21,5 @@ public class BubbleSort {
 
         int array[] = { 10, 45, 3, 7, 21, 99, 34, 76, 0, 22, 11 };
         System.out.println(Arrays.toString(quickSort(array)));
-
     }
 }
