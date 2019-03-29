@@ -42,7 +42,7 @@ public class PeakFinder {
 
     /**
      * 
-     * @param array (NxM)
+     * @param array (NxM), low index, high index
      * @Complexity - findGlobalMax - O(N) - twoDimPeakFinder - O(N logM)
      */
     public static int twoDimPeakFinder(int[][] array, int low, int high) {
