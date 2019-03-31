@@ -117,41 +117,59 @@ public class ArrayProblems implements Comparable<String> {
 	 * [13, 9, 5, 1] [14, 10, 6, 2] [15, 11, 7, 3] [16, 12, 8, 4]
 	 */
 
+	public static void rotate90(int[][] array) {
+
+		int l = array.length;
+		for (int i = 0; i < l / 2; i++) {
+
+			for (int j = i; j < l - i - 1; j++) {
+
+				int temp = array[i][j];
+				array[i][j] = array[l - 1 - j][i];
+				array[l - 1 - j][i] = array[l - 1 - i][l - 1 - j];
+				array[l - 1 - i][l - 1 - j] = array[j][l - 1 - i];
+				array[j][l - 1 - i] = temp;
+			}
+		}
+		System.out.println(Arrays.toString(array[0]));
+		System.out.println(Arrays.toString(array[1]));
+		System.out.println(Arrays.toString(array[2]));
+		System.out.println(Arrays.toString(array[3]));
+	}
+
 	public static void main(String[] args) {
 		int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7 };
 		// rotateByK(array, 5);
 		// replaceSpaces("e mo nsd z ");
 		int[][] matrix = new int[][] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
+		System.out.println(Arrays.toString(matrix[0]));
+		System.out.println(Arrays.toString(matrix[1]));
+		System.out.println(Arrays.toString(matrix[2]));
+		System.out.println(Arrays.toString(matrix[3]));
 
-		// rotate(matrix);
+		rotate90(matrix);
 		// 0 1 1 2 3 5 8
 		/*
-		 * 0 1 > 1 1 + 1 > 2
+		 * [16, 15, 14, 13] [12, 11, 10, 9] [8, 7, 6, 5] [4, 3, 2, 1]
+		 * ;;;;;;;;;;;;;;;[13, 9, 5, 1] [14, 10, 6, 2] [15, 11, 7, 3] [16, 12, 8, 4]
 		 * 
 		 * 
+		 * /
 		 * 
+		 * /* for (Map.Entry<String, String> entry : new HashMap<String,
+		 * String>().entrySet()) System.out.println("Key = " + entry.getKey() +
+		 * ", Value = " + entry.getValue());
 		 * 
+		 * int k = 2; // System.out.println(fibonacci(k));
+		 * 
+		 * int prev = 0; int sum = 1; int temp; for (int i = 1; i < k; i++) {
+		 * 
+		 * temp = sum; sum += prev; prev = temp;
+		 * 
+		 * } System.out.println(sum);
+		 * 
+		 * System.out.println("a".compareTo("b"));
 		 */
-
-		for (Map.Entry<String, String> entry : new HashMap<String, String>().entrySet())
-			System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
-
-		int k = 2;
-		// System.out.println(fibonacci(k));
-
-		int prev = 0;
-		int sum = 1;
-		int temp;
-		for (int i = 1; i < k; i++) {
-
-			temp = sum;
-			sum += prev;
-			prev = temp;
-
-		}
-		System.out.println(sum);
-
-		System.out.println("a".compareTo("b"));
 	}
 
 	static int fibonacci(int i) {
